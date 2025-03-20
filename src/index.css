@@ -1,0 +1,154 @@
+.snackbar {
+  margin: 1em;
+  padding: .75em 1.25em;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+  border-radius: 4px;
+  background-color: rgba(30, 30, 30);
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  font-weight: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 0px 2px 8px black;
+  transition: .25s ease-in-out;
+
+  p {
+    padding: 0;
+  }
+}
+
+.snackbar-hidden {
+  display: none!important;
+}
+
+.AnimStart-top-start,
+.AnimStart-bottom-start {
+  animation-name: snackbarLeftStart;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd-top-start,
+.AnimEnd-bottom-start {
+  animation-name: snackbarLeftEnd;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimStart-top-center {
+  animation-name: snackbarCenterTopStart;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd-top-center {
+  animation-name: snackbarCenterTopEnd;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimStart-bottom-center {
+  animation-name: snackbarCenterBottomStart;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd-bottom-center {
+  animation-name: snackbarCenterBottomEnd!important;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimStart-top-end,
+.AnimStart-bottom-end {
+  animation-name: snackbarRightStart!important;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+.AnimEnd-top-end,
+.AnimEnd-bottom-end {
+  animation-name: snackbarRightEnd!important;
+  animation-timing-function: ease-in-out;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes snackbarLeftStart {
+  from {
+    transform: translateX(-200%);
+  } to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes snackbarLeftEnd {
+  from {
+    transform: translateX(0%);
+  } to {
+    transform: translateX(-125%);
+    opacity: 0;
+  }
+}
+
+@keyframes snackbarCenterTopStart {
+  from {
+    transform: translateY(-200%);
+  } to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes snackbarCenterTopEnd {
+  from {
+    transform: translateY(0%);
+  } to {
+    transform: translateY(-125%);
+    opacity: 0;
+  }
+}
+
+@keyframes snackbarCenterBottomStart {
+  from {
+    transform: translateY(200%);
+  } to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes snackbarCenterBottomEnd {
+  from {
+    transform: translateY(0%);
+  } to {
+    transform: translateY(125%);
+    opacity: 0;
+  }
+}
+
+
+@keyframes snackbarRightStart {
+  from {
+    transform: translateX(200%);
+  } to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes snackbarRightEnd {
+  from {
+    transform: translateX(0%);
+  } to {
+    transform: translateX(125%);
+    opacity: 0;
+  }
+}
