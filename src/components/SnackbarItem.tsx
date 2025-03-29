@@ -16,7 +16,7 @@ export const SnackbarItemContainer: React.FC<IProps> = (props) => {
         <Stack
           direction='row'
           justifyContent='flex-start'
-          alignItems='center'
+          alignItems='flex-start'
           gap={1}
         >
           {props.item.icon}
@@ -24,7 +24,12 @@ export const SnackbarItemContainer: React.FC<IProps> = (props) => {
         </Stack>
       )}
       action={props.item.actions ? props.item.actions(props.item.id) : undefined}
-      sx={{ mt: 0, mb: 0 }}
+      sx={{
+        mt: 0, mb: 0,
+        '& .MuiSnackbarContent-message': {
+          maxWidth: '300px',
+        }
+      }}
     />
   )
 }
