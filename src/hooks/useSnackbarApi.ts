@@ -50,7 +50,7 @@ export const useSnackbarApi = (): SnackbarApi => {
       message,
       createdTimestamp: id,
       autoHideDuration: options && options.autoHideDuration ? options.autoHideDuration + 1000 : 5000,
-      actions: options.actions,
+      actions: options && options.actions ? options.actions : undefined,
     };
 
     setTimeout(() => {
