@@ -12,8 +12,8 @@ export type SnackbarItem = {
 
 export type SnackbarItemOptions = {
   icon?: React.ReactNode;
-  className: string;
-  position: SnackbarPosition;
+  className?: string;
+  position?: SnackbarPosition;
   autoHideDuration?: number;
   actions?: (key: number) => React.ReactNode;
 }

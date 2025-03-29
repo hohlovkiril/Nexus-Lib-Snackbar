@@ -45,6 +45,7 @@ export const useSnackbarApi = (): SnackbarApi => {
     const id = new Date().getTime();
     const newSnackItem: SnackbarItem = {
       id,
+      icon: options && options.icon ? options.icon : undefined,
       className: `AnimStart-${options && options.position ? options.position : 'bottom-end'}`,
       position: options && options.position ? options.position : 'bottom-end',
       message,
