@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from "react";
-import { Reason, SnackbarItem, SnackbarItemOptions } from "common";
+import { Reason, SnackbarItem, SnackbarItemOptions } from "../common";
 
 export interface SnackbarApi {
   stack: SnackbarItem[];

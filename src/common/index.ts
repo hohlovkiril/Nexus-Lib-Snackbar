@@ -1,5 +1,5 @@
 export {
-  type SnackbarProverProps,
+  type SnackbarProviderProps,
   type Reason,
   type SnackbarItem,
   type SnackbarItemOptions,

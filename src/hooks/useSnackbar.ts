@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { SnackbarItemOptions } from "common";
+import { SnackbarItemOptions } from "../common";
 
 export interface ISnackbarContext {
   enqueueSnackbar: (message: string, options?: SnackbarItemOptions) => void;

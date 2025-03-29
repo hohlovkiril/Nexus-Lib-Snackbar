@@ -1,11 +1,11 @@
 import React from "react";
-import { SnackbarProverProps, SnackbarItem, SnackbarPosition } from "common";
+import { SnackbarProviderProps, SnackbarItem, SnackbarPosition } from "../common";
 import { SnackbarContext, useSnackbarApi } from "../hooks";
 import { Stack } from "@mui/material";
 import { SnackbarItemContainer } from "../components/SnackbarItem";
 import "../index.css";
 
-export const SnackbarProvider: React.FC<SnackbarProverProps> = (props) => {
+export const SnackbarProvider: React.FC<SnackbarProviderProps> = (props) => {
   const {
     stack,
     enqueueSnackbar,

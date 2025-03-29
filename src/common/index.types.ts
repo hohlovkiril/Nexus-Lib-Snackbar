@@ -1,6 +1,6 @@
 import React from "react";
 
-export type SnackbarProverProps = {
+export type SnackbarProviderProps = {
   children: React.ReactNode;
 }
 
