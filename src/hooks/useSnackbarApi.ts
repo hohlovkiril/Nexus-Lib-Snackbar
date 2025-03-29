@@ -45,11 +45,11 @@ export const useSnackbarApi = (): SnackbarApi => {
     const id = new Date().getTime();
     const newSnackItem: SnackbarItem = {
       id,
-      className: `AnimStart-${options.position || 'bottom-end'}`,
-      position: options.position || 'bottom-end',
+      className: `AnimStart-${options && options.position ? options.position : 'bottom-end'}`,
+      position: options && options.position ? options.position : 'bottom-end',
       message,
       createdTimestamp: id,
-      autoHideDuration: options.autoHideDuration ? options.autoHideDuration + 1000 : 5000,
+      autoHideDuration: options && options.autoHideDuration ? options.autoHideDuration + 1000 : 5000,
       actions: options.actions,
     };
 
